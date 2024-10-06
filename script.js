@@ -28,8 +28,7 @@ const TaskManager = (function() {
     // Reference: Unit 2 - Higher-Order Functions and Callbacks
     const addTask = (title) => {
         // Add the new task to the tasks array
-        // TODO: Implement this function using the provided createTask function
-
+        tasks.push(createTask(title))
         // Call renderTasks to update the display
         renderTasks();
     };
