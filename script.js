@@ -38,7 +38,8 @@ const TaskManager = (function() {
     const removeTask = (id) => {
         // Filter tasks array
         // TODO: Implement this function to filter out the task with the specified id
-
+        const removedTask = tasks.filter(task => task.id != id)
+        tasks = removedTask
         // Call renderTasks to update the display
         renderTasks();
     };
