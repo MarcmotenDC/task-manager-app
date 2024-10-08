@@ -47,7 +47,6 @@ const TaskManager = (function() {
     // Reference: Unit 2 - Array Methods: map, filter, reduce
     const markTaskAsCompleted = (id) => {
         // Map through tasks array to update the task status
-        // TODO: Implement this function to update the status of the specified task to 'completed'
         tasks.map(task => {
             if (task.id === id) {
                 task.status = 'completed'
@@ -63,8 +62,8 @@ const TaskManager = (function() {
     // Reference: Unit 2 - Array Methods: map, filter, reduce
     const filterTasks = (status) => {
         // Return filtered tasks array
-        // TODO: Implement this function to return tasks based on their status
-
+        const filteredTasks = tasks.filter(task => task.status === status)
+        return filteredTasks
     };
 
     // Render tasks to the DOM
