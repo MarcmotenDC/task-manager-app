@@ -37,7 +37,6 @@ const TaskManager = (function() {
     // Reference: Unit 2 - Array Methods: map, filter, reduce
     const removeTask = (id) => {
         // Filter tasks array
-        // TODO: Implement this function to filter out the task with the specified id
         const removedTask = tasks.filter(task => task.id != id)
         tasks = removedTask
         // Call renderTasks to update the display
@@ -49,7 +48,11 @@ const TaskManager = (function() {
     const markTaskAsCompleted = (id) => {
         // Map through tasks array to update the task status
         // TODO: Implement this function to update the status of the specified task to 'completed'
-        
+        tasks.map(task => {
+            if (task.id === id) {
+                task.status = 'completed'
+            }
+        })
         
 
         // Call renderTasks to update the display
